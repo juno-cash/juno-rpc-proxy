@@ -34,3 +34,13 @@ url = "http://127.0.0.1:8232"
 username = "rpcuser"
 password = "rpcpassword"
 timeout = "30s"
+
+# ZMQ notification proxy
+# Forwards ZMQ block notifications from upstream node to local miners
+# This allows multiple miners to receive instant block notifications
+# without each connecting directly to the node
+[zmq]
+enabled = false
+# upstream_url = "tcp://127.0.0.1:28332"  # Node's ZMQ address
+# listen = "tcp://0.0.0.0:28333"          # Address miners connect to
+# topic = "hashblock"                      # Topic to forward (default)
